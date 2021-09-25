@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class DatasBr:
 
@@ -31,5 +31,5 @@ class DatasBr:
         return self.format_data()
 
     def tempo_cadastro(self):
-        tempo_cadastro = datetime.today() -  self.data_cadastro
+        tempo_cadastro = timedelta(days=7) + self.data_cadastro
         return tempo_cadastro
